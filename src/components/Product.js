@@ -43,13 +43,13 @@ function Product({ id, title, price, description, category, image }) {
         {Array(rating)
           .fill()
           .map((_, i) => (
-            <StarIcon className="h-5 text-yellow-500" />
+            <StarIcon className="h-5 text-yellow-500" key={i} />
           ))}
       </div>
       <p className="text-xs my-2 line-clamp-2">{description}</p>
       {/*line-clamp-2 truncate the sentance after two line */}
       <div className="mb-5">
-        <Currency quantity={price * 68} currency="INR" />
+        <Currency quantity={price} currency="INR" />
       </div>
       {hasPrime && (
         <div className="flex items-center space-x-2 -mt-5">
