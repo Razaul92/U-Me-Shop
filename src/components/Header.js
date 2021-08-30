@@ -8,14 +8,18 @@ import { signIn, signOut, useSession } from "next-auth/client";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { selectItems } from "../slices/basketSlice";
+import Hamburger from "./Hamburger";
+import { useState } from "react";
 
 function Header() {
   const [session] = useSession();
   const router = useRouter();
   const items = useSelector(selectItems);
 
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="sticky top-0 z-50">
+    <header className="sticky top-0 z-40">
       {/*Top Nav*/}
 
       <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
@@ -65,10 +69,18 @@ function Header() {
         </div>
       </div>
 
+      <div className="sm:hidden flex items-center h-10 rounded-md flex-grow cursor-pointer bg-yellow-400 hover:bg-yellow-500">
+        <input
+          className="p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4"
+          type="text"
+        />
+        <SearchIcon className="h-12 p-4" />
+      </div>
+
       {/*Bottom Nav*/}
       <div className="flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm">
         <p className="link flex items-center">
-          <MenuIcon className="h-6 mr-1" />
+          <MenuIcon className="h-6 mr-1" onClick={() => setOpen(true)} />
           All
         </p>
         <p className="link">Prime Video</p>
@@ -81,6 +93,7 @@ function Header() {
         <p className="link hidden lg:inline-flex">Shopper Toolkit</p>
         <p className="link hidden lg:inline-flex">Health & Personal Care</p>
       </div>
+      <Hamburger open={open} setOpen={setOpen} />
     </header>
   );
 }

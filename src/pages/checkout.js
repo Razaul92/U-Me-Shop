@@ -36,9 +36,6 @@ function Checkout() {
 
   return (
     <div className="bg-gray-100">
-      <Head>
-        <title>Amazon</title>
-      </Head>
       <Header />
 
       <main className="lg:flex max-w-screen-2xl mx-auto">
