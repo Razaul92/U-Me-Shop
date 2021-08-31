@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Order from "../components/Order";
 import db from "../../firebase";
 import moment from "moment";
+import Head from "next/head";
 
 function Orders({ orders }) {
   const [session] = useSession();
@@ -10,6 +11,9 @@ function Orders({ orders }) {
   console.log(orders);
   return (
     <div>
+      <Head>
+        <title> Your Orders</title>
+      </Head>
       <Header />
       <main className="max-w-screen-lg mx-auto p-10">
         <h1 className="text-3xl border-b mb-2 pb-1 border-yellow-400">

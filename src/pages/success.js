@@ -1,12 +1,16 @@
 import { CheckCircleIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
+import Head from "next/head";
 
 function Success() {
   const router = useRouter();
 
   return (
     <div className="bg-gray-100 h-screen">
+      <Head>
+        <title> Amazon.in Order Confirmed</title>
+      </Head>
       <Header />
       <main className="max-w-screen-lg mx-auto">
         <div className="flex flex-col p-10 bg-white">

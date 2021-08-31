@@ -8,6 +8,7 @@ import Currency from "react-currency-formatter";
 import axios from "axios";
 import { useSession } from "next-auth/client";
 import { loadStripe } from "@stripe/stripe-js";
+import Head from "next/head";
 
 const stripePromise = loadStripe(process.env.stripe_public_key);
 
@@ -36,6 +37,9 @@ function Checkout() {
 
   return (
     <div className="bg-gray-100">
+      <Head>
+        <title> Amazon.in Shopping Cart</title>
+      </Head>
       <Header />
 
       <main className="lg:flex max-w-screen-2xl mx-auto">
