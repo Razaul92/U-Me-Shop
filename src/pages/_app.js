@@ -4,27 +4,20 @@ import "../styles/globals.css";
 import { Provider as AuthProvider } from "next-auth/client";
 import { useState, useEffect } from "react";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+
+const NetStatus = dynamic(() => import("../components/NetStatus"), {
+  ssr: false,
+});
 
 const MyApp = ({ Component, pageProps }) => {
-  const [status, setStatus] = useState(navigator.onLine);
+  const [status, setStatus] = useState();
 
-  useEffect(() => {
-    const setOnline = () => {
-      setStatus(true);
-    };
-    const setOffline = () => {
-      setStatus(false);
-    };
+  const myStatus = (val) => {
+    setStatus(val);
+  };
 
-    window.addEventListener("online", setOnline);
-    window.addEventListener("offline", setOffline);
-
-    return () => {
-      window.removeEventListener("online", setOnline);
-      window.removeEventListener("offline", setOffline);
-    };
-  }, []);
-
+  console.log("myStatus", status);
   return (
     <AuthProvider session={pageProps.session}>
       <Provider store={store}>
@@ -35,6 +28,7 @@ const MyApp = ({ Component, pageProps }) => {
             <link rel="shortcut icon" href="favicon2.ico" type="image/x-icon" />
           )}
         </Head>
+        <NetStatus onStatus={myStatus} />
         <Component {...pageProps} />
       </Provider>
     </AuthProvider>
