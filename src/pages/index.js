@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import Header from "../components/Header";
 import ProductFeed from "../components/ProductFeed";
 import Head from "next/head";
+import { ExclamationCircleIcon } from "@heroicons/react/solid";
 
 export default function Home({ products }) {
   return (
