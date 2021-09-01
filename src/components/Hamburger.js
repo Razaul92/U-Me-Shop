@@ -11,11 +11,11 @@ function Hamburger({ open, setOpen }) {
   return (
     <>
       <div
-        className={`fixed h-screen top-0 left-0 z-50 bg-gray-50 overflow-x-auto w-80 lg:w-96 translate-x-0 transition-all ${
+        className={`fixed h-screen top-0 left-0 z-50 bg-blue-50 overflow-x-auto w-80 lg:w-96 translate-x-0 transition-all ${
           !open && "-translate-x-full transition-all"
         } `}
       >
-        <div className="sticky top-0 flex items-center bg-gray-800 py-2">
+        <div className="sticky top-0 flex items-center bg-blue-800 py-2">
           <UserCircleIcon
             className={`h-10 ml-10 text-white ${session && "ml-2"}`}
           />
@@ -39,54 +39,54 @@ function Hamburger({ open, setOpen }) {
         </div>
 
         <div className="px-10 py-5 space-y-5 border-b">
-          <h1 className="text-xl font-bold ">Digital Content And Devices</h1>
+          <h1 className="text-xl font-bold ">Shop By Department</h1>
           <p className="flex text-sm cursor-pointer">
-            Echo & Alexa{" "}
-            <ChevronRightIcon className="h-5 text-gray-500 mx-auto mr-0" />
+            Mobiles, Computers
+            <ChevronRightIcon className="h-5 text-blue-500 mx-auto mr-0" />
           </p>
           <p className="flex text-sm cursor-pointer">
-            Fire TV{" "}
-            <ChevronRightIcon className="h-5 text-gray-500 mx-auto mr-0" />
+            TV, Appliances, Electronics
+            <ChevronRightIcon className="h-5 text-blue-500 mx-auto mr-0" />
           </p>
           <p className="flex text-sm cursor-pointer">
-            Kinfle-E-Readers & eBooks{" "}
-            <ChevronRightIcon className="h-5 text-gray-500 mx-auto mr-0" />
+            Men's Fashion
+            <ChevronRightIcon className="h-5 text-blue-500 mx-auto mr-0" />
           </p>
           <p className="flex text-sm cursor-pointer">
-            Audible Audiobooks{" "}
-            <ChevronRightIcon className="h-5 text-gray-500 mx-auto mr-0" />
+            Women's Fashion
+            <ChevronRightIcon className="h-5 text-blue-500 mx-auto mr-0" />
           </p>
           <p className="flex text-sm cursor-pointer">
-            Amazon Prime Video{" "}
-            <ChevronRightIcon className="h-5 text-gray-500 mx-auto mr-0" />
-          </p>
-          <p className="flex text-sm cursor-pointer">
-            Amazon Prime Music{" "}
-            <ChevronRightIcon className="h-5 text-gray-500 mx-auto mr-0" />
+            See All
+            <ChevronDownIcon className="h-5 text-blue-500 mx-auto " />
           </p>
         </div>
 
         <div className="px-10 py-5 space-y-5 border-b">
-          <h1 className="text-xl font-bold ">Shop By Department</h1>
+          <h1 className="text-xl font-bold ">Digital Content And Devices</h1>
           <p className="flex text-sm cursor-pointer">
-            Mobiles, Computers
-            <ChevronRightIcon className="h-5 text-gray-500 mx-auto mr-0" />
+            Echo & Alexa{" "}
+            <ChevronRightIcon className="h-5 text-blue-500 mx-auto mr-0" />
           </p>
           <p className="flex text-sm cursor-pointer">
-            TV, Appliances, Electronics
-            <ChevronRightIcon className="h-5 text-gray-500 mx-auto mr-0" />
+            Fire TV{" "}
+            <ChevronRightIcon className="h-5 text-blue-500 mx-auto mr-0" />
           </p>
           <p className="flex text-sm cursor-pointer">
-            Men's Fashion
-            <ChevronRightIcon className="h-5 text-gray-500 mx-auto mr-0" />
+            Kinfle-E-Readers & eBooks{" "}
+            <ChevronRightIcon className="h-5 text-blue-500 mx-auto mr-0" />
           </p>
           <p className="flex text-sm cursor-pointer">
-            Women's Fashion
-            <ChevronRightIcon className="h-5 text-gray-500 mx-auto mr-0" />
+            Audible Audiobooks{" "}
+            <ChevronRightIcon className="h-5 text-blue-500 mx-auto mr-0" />
           </p>
           <p className="flex text-sm cursor-pointer">
-            See All
-            <ChevronDownIcon className="h-5 text-gray-500 mx-auto " />
+            Watch Videos{" "}
+            <ChevronRightIcon className="h-5 text-blue-500 mx-auto mr-0" />
+          </p>
+          <p className="flex text-sm cursor-pointer">
+            Prime Music{" "}
+            <ChevronRightIcon className="h-5 text-blue-500 mx-auto mr-0" />
           </p>
         </div>
 
@@ -94,11 +94,11 @@ function Hamburger({ open, setOpen }) {
           <h1 className="text-xl font-bold ">Programs & Features</h1>
           <p className="flex text-sm cursor-pointer">
             Gift Cards & Mobile Recharges
-            <ChevronRightIcon className="h-5 text-gray-500 mx-auto mr-0" />
+            <ChevronRightIcon className="h-5 text-blue-500 mx-auto mr-0" />
           </p>
           <p className="text-sm cursor-pointer">Flight Tickets</p>
           <p className="text-sm cursor-pointer">#FoundItOnAmazon</p>
-          <p className="text-sm cursor-pointer">Amazon Assistant</p>
+          <p className="text-sm cursor-pointer">Assistant</p>
         </div>
 
         <div className="px-10 py-5 space-y-5 border-b">

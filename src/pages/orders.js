@@ -8,15 +8,14 @@ import Head from "next/head";
 function Orders({ orders }) {
   const [session] = useSession();
 
-  console.log(orders);
   return (
     <div>
       <Head>
-        <title> Your Orders</title>
+        <title>Your Orders</title>
       </Head>
       <Header />
       <main className="max-w-screen-lg mx-auto p-10">
-        <h1 className="text-3xl border-b mb-2 pb-1 border-yellow-400">
+        <h1 className="text-3xl border-b mb-2 pb-1 border-red-500">
           Your Orders
         </h1>
         {session ? (

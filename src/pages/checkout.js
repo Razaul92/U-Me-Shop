@@ -37,7 +37,7 @@ function Checkout() {
   return (
     <div className="bg-gray-100">
       <Head>
-        <title> Amazon.in Shopping Cart</title>
+        <title>Shopping Cart</title>
       </Head>
       <Header />
 

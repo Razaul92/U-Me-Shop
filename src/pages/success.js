@@ -9,7 +9,7 @@ function Success() {
   return (
     <div className="bg-gray-100 h-screen">
       <Head>
-        <title> Amazon.in Order Confirmed</title>
+        <title>Order Confirmed</title>
       </Head>
       <Header />
       <main className="max-w-screen-lg mx-auto">

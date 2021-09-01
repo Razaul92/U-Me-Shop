@@ -9,10 +9,13 @@ const MAX_RATING = 5;
 const MIN_RATING = 1;
 
 // ReUsable Component
-function Product({ id, title, price, description, category, image }) {
-  const [rating] = useState(
-    Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
-  );
+function Product({ id, title, price, description, category, image, rating }) {
+  const rating1 = rating.rate.toFixed(2);
+  const rating2 = Number(rating.rate.toPrecision(1));
+
+  // const [rating3] = useState(
+  //   Math.floor(Math.random() * (MAX_RATING - MIN_RATING + 1)) + MIN_RATING
+  // );
   const dispatch = useDispatch();
 
   const [hasPrime] = useState(Math.random() < 0.5);
@@ -39,8 +42,11 @@ function Product({ id, title, price, description, category, image }) {
       </p>
       <Image src={image} height={200} width={200} objectFit="contain" />
       <h4 className="my-3 ">{title}</h4>
+
       <div className="flex">
-        {Array(rating)
+        <p className="text-gray-700">{rating1}</p>
+
+        {Array(rating2)
           .fill()
           .map((_, i) => (
             <StarIcon className="h-5 text-yellow-500" key={i} />

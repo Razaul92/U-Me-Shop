@@ -13,14 +13,14 @@ function Banner() {
         showThumbs={false}
         interval={5000}
       >
-        <div>
+        <div className="h-96">
           <img loading="lazy" src="https://links.papareact.com/gi1" alt="" />
         </div>
-        <div>
-          <img loading="lazy" src="https://links.papareact.com/6ff" alt="" />
+        <div className="h-96">
+          <img loading="lazy" src="/news2.jpg" alt="" />
         </div>
-        <div>
-          <img loading="lazy" src="https://links.papareact.com/7ma" alt="" />
+        <div className="h-96">
+          <img loading="lazy" src="/news3.jpg" alt="" />
         </div>
       </Carousel>
     </div>

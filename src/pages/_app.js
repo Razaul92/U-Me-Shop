@@ -17,7 +17,6 @@ const MyApp = ({ Component, pageProps }) => {
     setStatus(val);
   };
 
-  console.log("myStatus", status);
   return (
     <AuthProvider session={pageProps.session}>
       <Provider store={store}>
