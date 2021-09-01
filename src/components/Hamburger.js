@@ -5,9 +5,11 @@ import {
   XIcon,
 } from "@heroicons/react/solid";
 import { signIn, signOut, useSession } from "next-auth/client";
+import { useRouter } from "next/router";
 
 function Hamburger({ open, setOpen }) {
   const [session] = useSession();
+  const router = useRouter();
   return (
     <>
       <div
@@ -30,6 +32,20 @@ function Hamburger({ open, setOpen }) {
             className={`h-10 ml-10 text-white ${session && "ml-1"}`}
             onClick={() => setOpen(false)}
           />
+        </div>
+        <div className="px-10 py-5 space-y-5 border-b">
+          <h1
+            className="font-bold cursor-pointer"
+            onClick={() => router.push("/")}
+          >
+            Home
+          </h1>
+          <h1
+            className="font-bold cursor-pointer"
+            onClick={() => router.push("/orders")}
+          >
+            Your Orders
+          </h1>
         </div>
         <div className="px-10 py-5 space-y-5 border-b">
           <h1 className="text-xl font-bold ">Trending</h1>

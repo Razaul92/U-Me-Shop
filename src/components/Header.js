@@ -3,16 +3,18 @@ import { MenuIcon, ShoppingCartIcon } from "@heroicons/react/outline";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
-import { selectItems } from "../slices/basketSlice";
+import { selectItems, selectProducts } from "../slices/basketSlice";
 import Hamburger from "./Hamburger";
 import { useState } from "react";
 import FilterData from "./FilterData";
 import { XIcon, SearchIcon } from "@heroicons/react/solid";
 
-function Header({ products }) {
+function Header() {
   const [session] = useSession();
   const router = useRouter();
   const items = useSelector(selectItems);
+
+  const products = useSelector(selectProducts);
 
   const [itemSearch, setItemSearch] = useState("");
   const [filteredItem, setFilteredItem] = useState([]);

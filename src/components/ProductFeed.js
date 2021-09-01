@@ -52,6 +52,50 @@ function ProductFeed({ products }) {
             rating={rating}
           />
         ))}
+      {products.map(
+        ({ id, title, price, description, category, image, rating }) => (
+          <Product
+            key={id}
+            id={id}
+            title={title}
+            price={price * 68}
+            description={description}
+            category={category}
+            image={image}
+            rating={rating}
+          />
+        )
+      )}
+      <div className="md:col-span-2">
+        {products
+          .slice(8, 9)
+          .map(({ id, title, price, description, category, image, rating }) => (
+            <Product
+              key={id}
+              id={id}
+              title={title}
+              price={price * 68}
+              description={description}
+              category={category}
+              image={image}
+              rating={rating}
+            />
+          ))}
+      </div>
+      {products.map(
+        ({ id, title, price, description, category, image, rating }) => (
+          <Product
+            key={id}
+            id={id}
+            title={title}
+            price={price * 68}
+            description={description}
+            category={category}
+            image={image}
+            rating={rating}
+          />
+        )
+      )}
     </div>
   );
 }

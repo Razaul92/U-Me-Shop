@@ -8,6 +8,7 @@ import Currency from "react-currency-formatter";
 import axios from "axios";
 import { useSession } from "next-auth/client";
 import { loadStripe } from "@stripe/stripe-js";
+import { getSession } from "next-auth/client";
 
 const stripePromise = loadStripe(process.env.stripe_public_key);
 

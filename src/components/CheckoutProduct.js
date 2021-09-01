@@ -14,7 +14,11 @@ function CheckoutProduct({
   image,
   hasPrime,
 }) {
+  const rating1 = rating.rate.toFixed(2);
+  const rating2 = Number(rating.rate.toPrecision(1));
+
   const dispatch = useDispatch();
+
   const addItemToBasket = () => {
     const product = {
       id,
@@ -42,7 +46,8 @@ function CheckoutProduct({
         <p>{title}</p>
 
         <div className="flex">
-          {Array(rating)
+          <p className="text-gray-700 text-sm">{rating1}</p>
+          {Array(Number(rating2.toPrecision(1)))
             .fill()
             .map((_, i) => (
               <StarIcon key={i} className="h-5 text-yellow-500" />
